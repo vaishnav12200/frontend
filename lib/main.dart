@@ -67,15 +67,14 @@ class _RootPageState extends State<RootPage> {
     ),
     const SizedBox(height: 20),
     Container(
-      width: 200,
-      height: 100,
-      color: Colors.green,
-      child: const Center(
-        child: Text(
-          'Flutter Container',
-          style: TextStyle(color: Colors.white, fontSize: 18),
-        ),
-      ),
+      width:200,
+      height:100,
+     padding: EdgeInsets.all(20.0),
+     decoration: BoxDecoration(
+      color: Colors.orange,
+      borderRadius: BorderRadius.circular(20.0)
+     ),
+     child:const Center(child:Text("i am vaish")) 
     ),
     const SizedBox(height: 20),
     Container(
@@ -89,7 +88,7 @@ class _RootPageState extends State<RootPage> {
         ),
       ),
     ),
-        ],
+    ],
       )
     );
   }
