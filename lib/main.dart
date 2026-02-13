@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'pages/settings_page.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -61,6 +63,13 @@ appBar: AppBar(
           setState(() {
             _counter = index;           
           });
+         
+         if (index == 3){
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const SettingsPage()),
+          );
+         }
          },
          selectedIndex: _counter,
       ),
@@ -83,7 +92,7 @@ appBar: AppBar(
       height:100,
      padding: EdgeInsets.all(20.0),
      decoration: BoxDecoration(
-      color: Colors.orange,
+      color: const Color.fromARGB(255, 103, 100, 96),
       borderRadius: BorderRadius.circular(20.0)
      ),
      child:const Center(child:Text("i am vaish")) 
