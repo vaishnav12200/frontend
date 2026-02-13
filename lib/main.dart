@@ -29,7 +29,18 @@ class _RootPageState extends State<RootPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('flutter'), backgroundColor: Colors.green),
+appBar: AppBar(
+  title: const Text('flutter'), 
+  backgroundColor: Colors.green,
+  actions: [
+    IconButton(
+      onPressed: () {
+        debugPrint('Notifications clicked');
+      },
+      icon: const Icon(Icons.notifications),
+    ),
+  ],
+),
 
       floatingActionButton: FloatingActionButton(
         onPressed: () {
@@ -38,6 +49,7 @@ class _RootPageState extends State<RootPage> {
         backgroundColor: Colors.green,
         child: Icon(Icons.add),
       ),
+      
       bottomNavigationBar: NavigationBar(
         destinations:const [
           NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
@@ -47,7 +59,7 @@ class _RootPageState extends State<RootPage> {
 ],
          onDestinationSelected: (int index){
           setState(() {
-            _counter = index;
+            _counter = index;           
           });
          },
          selectedIndex: _counter,
