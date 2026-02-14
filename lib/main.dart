@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'pages/settings_page.dart';
-
+import 'pages/profile_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -63,6 +63,12 @@ appBar: AppBar(
           setState(() {
             _counter = index;           
           });
+          if (index == 2){
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const ProfilePage()),
+            );
+          }
          
          if (index == 3){
           Navigator.push(
