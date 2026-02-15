@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'pages/settings_page.dart';
 import 'pages/profile_page.dart';
+import 'pages/search_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -63,6 +64,13 @@ appBar: AppBar(
           setState(() {
             _counter = index;           
           });
+          if (index == 1){
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const SearchPage()),
+            );
+            debugPrint('search clicked');
+          }
           if (index == 2){
             Navigator.push(
               context,
@@ -83,14 +91,7 @@ appBar: AppBar(
         children: [
       Padding(
         padding: EdgeInsets.only(top:20.0),
-      child: SearchBar(
-        leading: Icon(Icons.search),
-        backgroundColor:WidgetStateProperty.all(const Color.fromARGB(255, 221, 154, 9)),
-        hintText: 'Search',
-        onChanged: (String value) {
-          debugPrint('Search query: $value');
-        },
-      ),
+      
     ),
     const SizedBox(height: 20),
     Container(
