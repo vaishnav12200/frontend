@@ -10,7 +10,7 @@ class ProfilePage extends StatelessWidget {
         backgroundColor: Colors.green,
       ),
       body: Center(
-        child: Text('Profile page'),
+        child: Text('jigg jag'),
       ),
     );
   }

@@ -4,8 +4,6 @@ import 'package:flutter/material.dart';
 
 /// Flutter code sample for [CarouselView].
 
-void main() => runApp(const CarouselExampleApp());
-
 class CarouselExampleApp extends StatelessWidget {
   const CarouselExampleApp({super.key});
 
