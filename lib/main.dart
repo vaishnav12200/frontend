@@ -64,13 +64,7 @@ appBar: AppBar(
           setState(() {
             _counter = index;           
           });
-          if (index == 1){
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const SearchPage()),
-            );
-            debugPrint('search clicked');
-          }
+          
           if (index == 2){
             Navigator.push(
               context,
