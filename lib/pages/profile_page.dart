@@ -9,8 +9,9 @@ class ProfilePage extends StatelessWidget {
         title: const Text('Profiles...'),
         backgroundColor: Colors.green,
       ),
+      backgroundColor: Colors.orange,
       body: Center(
-        child: Text('jigg jag'),
+        child: Text('profiles'),
       ),
     );
   }
